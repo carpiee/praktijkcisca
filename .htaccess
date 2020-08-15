@@ -1,0 +1,4 @@
+RewriteEngine on
+Options +FollowSymlinks
+
+RewriteRule ^wie-ben-ik/?$ overmij.html [NC,L]

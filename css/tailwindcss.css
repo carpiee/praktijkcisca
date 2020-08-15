@@ -22261,6 +22261,10 @@ video {
   background-color: #f68b29;
 }
 
+.mt-36 {
+  margin-top: 9rem !important;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

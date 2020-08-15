@@ -1,0 +1,97 @@
+<header class="bg-white relative">
+  <div
+    class="md:hidden px-4 py-4 bg_brand_blue text-white font-bold text-center"
+  >
+    <h3 class="text-lg font-semibold">Direct contact opnemen:</h3>
+    <a href="#">06 - 12345678</a>
+  </div>
+  <div
+    class="px-4 py-4 container mx-auto w-full max-w-screen-lg flex items-center justify-between"
+  >
+    <a href="#" title="Praktijk Cisca Trapman - home">
+      <img class="md:h-20 h-10" src="./img/logo.png" alt="logo" />
+    </a>
+    <div id="burger" class="md:hidden block cursor-pointer">
+      <svg
+        class="h-6 w-6 brand_blue"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        class="menu w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        ></path>
+      </svg>
+    </div>
+    <div class="md:flex hidden space-x-4">
+      <a
+        class="brand_purple"
+        href="#"
+        title="Praktijk Cisca Trapman - Andere kijk op het leven"
+        >Andere kijk Op het leven</a
+      >
+      <a
+        class="brand_orange"
+        href="#"
+        title="Praktijk Cisca Trapman - Kinesiologie"
+      >
+        Kinesiologie</a
+      >
+      <a class="brand_green" href="#" title="Praktijk Cisca Trapman - Message"
+        >Message</a
+      >
+    </div>
+  </div>
+  <div class="bg_brand_purple">
+    <div
+      class="px-4 py-4 md:flex hidden md:space-x-6 container mx-auto max-w-screen-lg text-white text-sm uppercase"
+    >
+      <span>
+        <a href="#" title="Praktijk Cisca Trapman - Home">Home</a>
+      </span>
+      <span>
+        <a href="#" title="Praktijk Cisca Trapman - Contact">Contact</a>
+      </span>
+    </div>
+  </div>
+  <div
+    id="menu"
+    class="px-4 pt-6 space-y-4 mt-36 md:hidden hidden flex-col bg-white absolute inset-x-0 top-0 z-10 font-semibold shadow-lg"
+  >
+    <span>
+      <a href="#" title="Praktijk Cisca Trapman - Home">Home</a>
+    </span>
+    <span>
+      <a href="#" title="Praktijk Cisca Trapman - Contact">Contact</a>
+    </span>
+    <div class="-mx-4 flex flex-col">
+      <span onclick="colap(1)" class="py-4 px-4 bg_brand_purple text-white">
+        Andere kijk op het leven
+      </span>
+      <ul id="colap_1" class="py-2 ml-8 hidden">
+        <li><a class="inline-block py-2" href="#">Home</a></li>
+        <li><a class="inline-block py-2" href="#">Diensten</a></li>
+        <li><a class="inline-block py-2" href="#">Meer informatie</a></li>
+        <li><a class="inline-block py-2" href="#">Tarieven</a></li>
+      </ul>
+      <span onclick="colap(2)" class="py-4 px-4 bg_brand_orange text-white">
+        Kinesiologie
+      </span>
+      <ul id="colap_2" class="py-2 ml-8 hidden">
+        <li><a class="inline-block py-2" href="#">Home</a></li>
+        <li><a class="inline-block py-2" href="#">Tarieven</a></li>
+      </ul>
+      <span onclick="colap(3)" class="py-4 px-4 bg_brand_green text-white">
+        Massage
+      </span>
+      <ul id="colap_3" class="py-2 ml-8 hidden">
+        <li><a class="inline-block py-2" href="#">Home</a></li>
+        <li><a class="inline-block py-2" href="#">Tarieven</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
