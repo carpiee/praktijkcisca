@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="./css/tailwindcss.css" media="all" />
   </head>
   <body>
+    <div
+      class="md:hidden px-4 py-4 bg_brand_blue text-white font-bold text-center"
+    >
+      <h3 class="text-lg font-semibold">Direct contact opnemen:</h3>
+      <a href="#">06 - 12345678</a>
+    </div>
     <header class="bg-white relative">
       <div
         class="px-4 py-4 container mx-auto w-full max-w-screen-lg flex items-center justify-between"
@@ -67,31 +73,29 @@
           </span>
         </div>
       </div>
-    </header>
-
-    <!-- menu -->
-    <div
-      id="menu"
-      class="px-4 pt-6 space-y-4 mt-16 md:hidden hidden flex-col bg-white absolute inset-x-0 top-0 z-10 font-semibold shadow-lg"
-    >
-      <span>
-        <a href="#" title="Praktijk Cisca Trapman - Home">Home</a>
-      </span>
-      <span>
-        <a href="#" title="Praktijk Cisca Trapman - Contact">Contact</a>
-      </span>
-      <div class="-mx-4 flex flex-col">
-        <span class="py-4 px-4 bg_brand_purple text-white">
-          <a href="#">Andere kijk op het leven</a>
+      <div
+        id="menu"
+        class="px-4 pt-6 space-y-4 mt-16 md:hidden hidden flex-col bg-white absolute inset-x-0 top-0 z-10 font-semibold shadow-lg"
+      >
+        <span>
+          <a href="#" title="Praktijk Cisca Trapman - Home">Home</a>
         </span>
-        <span class="py-4 px-4 bg_brand_orange text-white">
-          <a href="#">Kinesiologie</a>
+        <span>
+          <a href="#" title="Praktijk Cisca Trapman - Contact">Contact</a>
         </span>
-        <span class="py-4 px-4 bg_brand_green text-white">
-          <a href="#">Massage</a>
-        </span>
+        <div class="-mx-4 flex flex-col">
+          <span class="py-4 px-4 bg_brand_purple text-white">
+            <a href="#">Andere kijk op het leven</a>
+          </span>
+          <span class="py-4 px-4 bg_brand_orange text-white">
+            <a href="#">Kinesiologie</a>
+          </span>
+          <span class="py-4 px-4 bg_brand_green text-white">
+            <a href="#">Massage</a>
+          </span>
+        </div>
       </div>
-    </div>
+    </header>
 
     <div
       class="relative flex-grow-0 bg-cover bg-center"
@@ -190,9 +194,9 @@
     </div>
 
     <section id="Over-Cisca-Trapman" class="py-10 bg_brand_blue">
-      <div class="px-4 md:space-x-10 md:flex container mx-auto max-w-screen-lg">
+      <div class="px-4 md:space-x-20 md:flex container mx-auto max-w-screen-lg">
         <img
-          class="md:-mb-10 mb-0 sm:mx-0 mx-auto h-64 mt-auto flex-shrink-0"
+          class="md:-mb-10 mb-0 sm:mx-0 mx-auto h-48 mt-auto flex-shrink-0"
           src="./img/cisca.png"
           alt="praktijk foto"
         />
@@ -213,14 +217,14 @@
       </div>
     </section>
     <footer class="bg-white">
-      <div class="flex w-full">
-        <div class="flex-grow w-20 h-10 bg_brand_purple"></div>
-        <div class="flex-grow w-20 h-10 bg_brand_orange"></div>
-        <div class="flex-grow w-20 h-10 bg_brand_green"></div>
-        <div class="flex-grow w-20 h-10 bg_brand_blue"></div>
-      </div>
       <div class="px-4 py-2 text-center text-sm">
         © Praktijk Cisca Trapman - Alle Rechten Voorbehouden. Privacyverklaring
+      </div>
+      <div class="flex w-full">
+        <div class="flex-grow w-20 h-5 bg_brand_purple"></div>
+        <div class="flex-grow w-20 h-5 bg_brand_orange"></div>
+        <div class="flex-grow w-20 h-5 bg_brand_green"></div>
+        <div class="flex-grow w-20 h-5 bg_brand_blue"></div>
       </div>
     </footer>
     <script type="text/javascript">
