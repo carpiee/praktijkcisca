@@ -33,18 +33,10 @@
             </div>
         </div>
     </section>
-    <footer class="bg-white">
-        <div class="px-4 py-2 text-center text-sm">
-            © Praktijk Cisca Trapman - Alle Rechten Voorbehouden. Privacyverklaring
-        </div>
-        <div class="flex w-full">
-            <div class="flex-grow w-20 h-5 bg_brand_purple"></div>
-            <div class="flex-grow w-20 h-5 bg_brand_orange"></div>
-            <div class="flex-grow w-20 h-5 bg_brand_green"></div>
-            <div class="flex-grow w-20 h-5 bg_brand_blue"></div>
-        </div>
-    </footer>
+    <?php include_once("./inc/footer.html") ?>
     <script defer src="./js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </body>
 
 </html>
