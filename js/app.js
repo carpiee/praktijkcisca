@@ -1,25 +1,51 @@
 $(document).ready(function () {
-  function colap(id) {
-    const item = document.getElementById(`colap_${id}`);
-    if (item.classList.contains("hidden")) {
-      item.classList.remove("hidden");
-      item.classList.add("block");
+  // colap menu mobile
+  $("#colap_trigger_1").click(() => {
+    const item = $("#colap_1");
+    if (item.hasClass("hidden")) {
+      item.removeClass("hidden");
+      item.addClass("block");
     } else {
-      item.classList.remove("block");
-      item.classList.add("hidden");
+      item.removeClass("block");
+      item.addClass("hidden");
     }
-  }
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("menu");
-  burger.addEventListener("click", ShowMenu);
+  });
+  $("#colap_trigger_2").click(() => {
+    const item = $("#colap_2");
+    if (item.hasClass("hidden")) {
+      item.removeClass("hidden");
+      item.addClass("block");
+    } else {
+      item.removeClass("block");
+      item.addClass("hidden");
+    }
+  });
+  $("#colap_trigger_3").click(() => {
+    const item = $("#colap_3");
+    if (item.hasClass("hidden")) {
+      item.removeClass("hidden");
+      item.addClass("block");
+    } else {
+      item.removeClass("block");
+      item.addClass("hidden");
+    }
+  });
+
+  // showmenu
+
+  const burger = $("#burger");
+  const menu = $("#menu");
+  burger.click(function () {
+    ShowMenu();
+  });
 
   function ShowMenu() {
-    if (menu.classList.contains("hidden")) {
-      menu.classList.remove("hidden");
-      menu.classList.add("flex");
+    if (menu.hasClass("hidden")) {
+      menu.removeClass("hidden");
+      menu.addClass("flex");
     } else {
-      menu.classList.remove("flex");
-      menu.classList.add("hidden");
+      menu.removeClass("flex");
+      menu.addClass("hidden");
     }
   }
   let slideIndex = null;
