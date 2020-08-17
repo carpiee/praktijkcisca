@@ -2,3 +2,5 @@ RewriteEngine on
 Options +FollowSymlinks
 
 RewriteRule ^wie-ben-ik/?$ overmij.html [NC,L]
+RewriteRule ^contact/?$ contact.php [NC,L]
+RewriteRule ^home/?$ index.php [NC,L]
