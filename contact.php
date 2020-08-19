@@ -13,7 +13,7 @@
     <?php include_once("./inc/slider.html") ?>
     <section class="px-4 py-6 space-y-10 container mx-auto max-w-screen-lg">
         <h1 class="text-3xl font-semibold">Neem contact op!</h1>
-        <iframe class="w-full h-64 overflow-hidden"
+        <iframe class="w-full h-64 overflow-hidden pointer-events-none"
             src="https://www.openstreetmap.org/export/embed.html?bbox=4.683673381805421%2C51.82886072567653%2C4.686996638774873%2C51.83037578188974&layer=mapnik&marker=51.829618260153644%2C4.685336351394653"
             frameborder="0"></iframe>
         <div class="pb-10 grid md:grid-cols-2">
@@ -21,30 +21,31 @@
                 <p>Praktijk Cisca Trapman</p>
                 <p>Constantijn Huygenslaan 43</p>
                 <p>3351 XA Papendrecht</p>
-                <p>Telefoon: <a href="0643206221">06 - 43 20 62 21</a></p>
+                <p>Telefoon: <a href="tel:0643206221">06 - 43 20 62 21</a></p>
             </div>
             <div class="mt-6 md:mt-0">
                 <form class="space-y-4" action="">
-                    <label for="Dhr">
+                    <label class="text-sm" for="Dhr">
                         Dhr.
                     </label>
                     <input class="mr-2" type="radio" id="Dhr" name="aanhef" value="Dhr.">
-                    <label for="Mevr">
+                    <label class="text-sm" for="Mevr">
                         Mevr.
                     </label>
                     <input type="radio" name="aanhef" value="Mevr.">
                     <div class="space-y-4 flex flex-col">
-                        <input class="px-4 py-2 rounded border appearance-none" name="voornaam"
-                            placeholder="Voornaam" />
+                        <input class="px-4 py-2 rounded border appearance-none" name="voornaam" placeholder="Voornaam"
+                            required />
                         <input class="px-4 py-2 rounded border appearance-none" name="tussenvoegsel"
                             placeholder="Tussenvoegsel" />
                         <input class="px-4 py-2 rounded border appearance-none" name="achternaam"
-                            placeholder="Achternaam" />
+                            placeholder="Achternaam" required />
                         <input class="px-4 py-2 rounded border appearance-none" name="telefoonnummer"
-                            placeholder="Telefoonnummer" />
-                        <input class="px-4 py-2 rounded border appearance-none" name="email" placeholder="Emailadres" />
+                            placeholder="Telefoonnummer" required />
+                        <input class="px-4 py-2 rounded border appearance-none" name="email" placeholder="Emailadres"
+                            required />
                         <textarea class="px-4 py-2 rounded border appearance-none" name="opmerking" rows="5"
-                            placeholder="Opmerking"></textarea>
+                            placeholder="Opmerking" required></textarea>
                         <button class="px-4 py-2 rounded border font-semibold" type="submit">Verzend</button>
                     </div>
                 </form>
