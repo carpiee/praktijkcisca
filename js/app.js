@@ -32,7 +32,6 @@ $(document).ready(function () {
   const menu = $("#menu");
   burger.click(function () {
     ShowMenu();
-    console.log("MENU");
   });
 
   function ShowMenu() {
@@ -111,7 +110,6 @@ $(document).on("click", function (event) {
       menu !== event.target &&
       !menu.has(event.target).length
     ) {
-      console.log("close menu");
       $("#menu").removeClass("flex");
       $("#menu").addClass("hidden");
     }
