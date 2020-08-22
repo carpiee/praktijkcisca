@@ -29,21 +29,35 @@ $(document).ready(function () {
   // showmenu
 
   const burger = $("#burger");
-  const menu = $("#menu");
   burger.click(function () {
-    ShowMenu();
+    showMenu();
   });
 
-  function ShowMenu() {
+  function showMenu() {
+    const menu = $("#menu");
     // menu.slideToggle("fast");
     if (menu.hasClass("hidden")) {
-      menu.removeClass("hidden");
-      menu.addClass("flex");
+      $("#menu").stop(true, false).removeClass("hidden", 1000);
     } else {
-      menu.removeClass("flex");
-      menu.addClass("hidden");
+      $("#menu").stop(true, false).addClass("hidden", 1000);
     }
   }
+
+  $(document).on("click", function (event) {
+    var trigger = $("#burger");
+    var menu = $("#menu");
+    if ($("#menu").css("display") == "block") {
+      if (
+        trigger !== event.target &&
+        !trigger.has(event.target).length &&
+        menu !== event.target &&
+        !menu.has(event.target).length
+      ) {
+        showMenu();
+      }
+    }
+  });
+
   let slideIndex = null;
 
   showSlides();
@@ -67,51 +81,20 @@ $(document).ready(function () {
   // dropdown menu
 
   $("#dropdown_container_1").click(function () {
-    $("#dropdown_1").attr("tabIndex", -1);
-    if ($("#dropdown_1").hasClass("hidden")) {
-      $("#dropdown_1").removeClass("hidden");
-    } else {
-      $("#dropdown_1").addClass("hidden");
-    }
-  });
-  $("#dropdown_1").focusout(function () {
-    $("#dropdown_1").addClass("hidden");
+    $("#dropdown_1").slideToggle("fast");
+    $("#dropdown_2").slideUp();
+    $("#dropdown_3").slideUp();
   });
 
   $("#dropdown_container_2").click(function () {
-    $("#dropdown_2").focus();
-    if ($("#dropdown_2").hasClass("hidden")) {
-      $("#dropdown_2").removeClass("hidden");
-    } else {
-      $("#dropdown_2").addClass("hidden");
-    }
+    $("#dropdown_2").slideToggle("fast");
+    $("#dropdown_1").slideUp();
+    $("#dropdown_3").slideUp();
   });
-  $("#dropdown_2").on("focusout", function (e) {
-    $("#dropdown_2").addClass("hidden");
-  });
+
   $("#dropdown_container_3").click(function () {
-    if ($("#dropdown_3").hasClass("hidden")) {
-      $("#dropdown_3").removeClass("hidden");
-    } else {
-      $("#dropdown_3").addClass("hidden");
-    }
+    $("#dropdown_3").slideToggle("fast");
+    $("#dropdown_2").slideUp();
+    $("#dropdown_1").slideUp();
   });
-  $("#dropdown_container_3").on("focusout", function (e) {
-    $("#dropdown_3").addClass("hidden");
-  });
-});
-$(document).on("click", function (event) {
-  var trigger = $("#burger");
-  var menu = $("#menu > *");
-  if ($("#menu").hasClass("flex")) {
-    if (
-      trigger !== event.target &&
-      !trigger.has(event.target).length &&
-      menu !== event.target &&
-      !menu.has(event.target).length
-    ) {
-      $("#menu").removeClass("flex");
-      $("#menu").addClass("hidden");
-    }
-  }
 });
